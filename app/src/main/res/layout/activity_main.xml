@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/sv1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl1">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:id="@+id/tb">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tb"
+            android:id="@+id/LL1"
+            android:layout_margin="5dp">
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pg_sample"
+                android:textSize="20sp"
+                android:padding="5sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/LL1"
+            android:background="#525659"
+            android:id="@+id/vw1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vw1"
+            android:id="@+id/rl2"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp">
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp1">
+                </Spinner>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Product Group "/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl2"
+            android:id="@+id/rl3"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="4dp">
+                    <Spinner
+                        android:id="@+id/sp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Spinner>
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/et1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/border"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Literature "/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl3"
+            android:id="@+id/rl4"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="4dp">
+                    <Spinner
+                        android:id="@+id/sp3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Spinner>
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/et2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/border"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Physician Sample "/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl4"
+            android:id="@+id/rl5"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="4dp">
+                    <Spinner
+                        android:id="@+id/sp4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Spinner>
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/et3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/border"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Gift "/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl5"
+            android:background="#525659"
+            android:layout_marginTop="15dp"
+            android:id="@+id/vw2"/>
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/ti1"-->
+            <!--style="@style/TextInputLayoutStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/vw2"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:hint="Accompanied With"-->
+            <!--app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"-->
+            <!--android:textColorHint="#0097A7">-->
+
+            <!--<android.support.design.widget.TextInputEditText-->
+                <!--android:id="@+id/et4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+
+                <!--android:textStyle="normal"-->
+                <!--android:textSize="20sp"-->
+                <!--android:lines="1" />-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vw2"
+            android:id="@+id/rl6"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_marginTop="12dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15sp">
+                <EditText
+                    android:id="@+id/et4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:lines="1"
+                    android:layout_marginLeft="20sp"
+                    android:textColorHint="#0096A6"
+                    android:maxLines="3"
+                    android:gravity="top"
+                    android:background="@android:color/transparent"
+                    android:hint=" Input Text "/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Accompanied With "/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl6"
+            android:id="@+id/rl7"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_marginTop="12dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15sp">
+
+                <EditText
+                    android:id="@+id/et5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:background="@android:color/transparent"
+                    android:hint=" Input Text "
+                    android:lines="3"
+                    android:singleLine="false"
+                    android:textColorHint="#0096A6"
+                    android:gravity="top"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:textSize="17sp"
+                android:background="#ffffff"
+                android:text=" Remarks "/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl7"
+            android:id="@+id/rl8"
+            android:layout_margin="5dp">
+            <Button
+                android:id="@+id/btn1"
+                android:background="@drawable/button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp"
+                android:text="SUBMIT"
+                android:textSize="20sp"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
