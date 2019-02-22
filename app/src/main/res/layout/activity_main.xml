@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/sv1">
+    android:id="@+id/sv1"
+    android:background="#F4F4F4">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -73,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
+                android:background="#F4F4F4"
                 android:text=" Product Group "/>
         </RelativeLayout>
         <RelativeLayout
@@ -100,7 +101,9 @@
                     <Spinner
                         android:id="@+id/sp2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
                 </RelativeLayout>
                 <EditText
                     android:id="@+id/et1"
@@ -110,7 +113,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/border"
-                    android:hint="00"
+                    android:hint="@string/_00"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="20sp"/>
@@ -120,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
+                android:background="#F4F4F4"
                 android:text=" Literature "/>
         </RelativeLayout>
 
@@ -142,11 +145,15 @@
                     android:paddingLeft="20dp"
                     android:paddingTop="4dp"
                     android:paddingRight="4dp"
-                    android:paddingBottom="4dp">
+                    android:paddingBottom="4dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="4dp">
                     <Spinner
                         android:id="@+id/sp3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
                 </RelativeLayout>
                 <EditText
                     android:id="@+id/et2"
@@ -156,18 +163,20 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/border"
-                    android:hint="00"
+                    android:hint="@string/_00"
                     android:inputType="number"
                     android:textAlignment="center"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
-                android:text=" Physician Sample "/>
+                android:background="#F4F4F4"
+                android:text=" Physician Sample "
+                android:layout_marginStart="20sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -192,7 +201,9 @@
                     <Spinner
                         android:id="@+id/sp4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></Spinner>
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
                 </RelativeLayout>
                 <EditText
                     android:id="@+id/et3"
@@ -202,18 +213,20 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/border"
-                    android:hint="00"
+                    android:hint="@string/_00"
                     android:inputType="number"
                     android:textAlignment="center"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
-                android:text=" Gift "/>
+                android:background="#F4F4F4"
+                android:text=" Gift "
+                android:layout_marginStart="20sp" />
         </RelativeLayout>
 
         <View
@@ -264,20 +277,23 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:lines="1"
+                    android:textColor="#0096A6"
                     android:layout_marginLeft="20sp"
                     android:textColorHint="#0096A6"
                     android:maxLines="3"
                     android:gravity="top"
                     android:background="@android:color/transparent"
-                    android:hint=" Input Text "/>
+                    android:hint=" Input Text "
+                    android:layout_marginStart="20sp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
-                android:text=" Accompanied With "/>
+                android:background="#F4F4F4"
+                android:text=" Accompanied With "
+                android:layout_marginStart="20sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -299,20 +315,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20sp"
+                    android:textColor="#0096A6"
                     android:background="@android:color/transparent"
-                    android:hint=" Input Text "
+                    android:hint="@string/input_text"
                     android:lines="3"
                     android:singleLine="false"
                     android:textColorHint="#0096A6"
                     android:gravity="top"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginStart="20sp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:textSize="17sp"
-                android:background="#ffffff"
+                android:background="#F4F4F4"
                 android:text=" Remarks "/>
         </RelativeLayout>
 

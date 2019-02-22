@@ -57,6 +57,11 @@ public class fetchJSONdata extends AsyncTask<Void,Void,Void> {
             literature_list = new ArrayList<>();
             physician_list = new ArrayList<>();
             gift_list = new ArrayList<>();
+
+            product_List.add("Choose");
+            literature_list.add("Choose");
+            physician_list.add("Choose");
+            gift_list.add("Choose");
             String inputLine;
             while((inputLine = bufferedReader.readLine())!=null){
                 line.append(inputLine);

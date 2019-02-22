@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         etPhysicianSample = findViewById(R.id.et2);
         etGift = findViewById(R.id.et3);
         btnSubmit = findViewById(R.id.btn1);
-
         fetchJSONdata process = new fetchJSONdata(MainActivity.this);
         process.execute();
 
+        //String text_ProductGroup = spProductGroup.getSelectedItem().toString();
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+
     }
 
     public static Context getAppContext() {
