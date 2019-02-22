@@ -21,9 +21,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class fetchJSONdata extends AsyncTask<Void,Void,Void> {
-    String data = "";
     String singleParsed = "";
-    String dataParsed = "";
     ArrayList<String> product_List;
     ArrayList<String> literature_list;
     ArrayList<String> physician_list;
@@ -76,27 +74,27 @@ public class fetchJSONdata extends AsyncTask<Void,Void,Void> {
 
             for(int i=0;i<obj_product_group_list.length();i++){
                 JSONObject obj_child = obj_product_group_list.getJSONObject(i);
-                singleParsed = obj_child.getString("product_group");
+                singleParsed = obj_child.getString("id")+"."+obj_child.getString("product_group");
                 product_List.add(singleParsed);
             }
             singleParsed = "";
             for(int i=0;i<obj_literature_list.length();i++){
                 JSONObject obj_child = obj_literature_list.getJSONObject(i);
-                singleParsed = obj_child.getString("literature");
+                singleParsed = obj_child.getString("id")+"."+obj_child.getString("literature");
                 literature_list.add(singleParsed);
             }
 
             singleParsed = "";
             for(int i=0;i<obj_physician_sample_list.length();i++){
                 JSONObject obj_child = obj_physician_sample_list.getJSONObject(i);
-                singleParsed = obj_child.getString("sample");
+                singleParsed = obj_child.getString("id")+"."+obj_child.getString("sample");
                 physician_list.add(singleParsed);
             }
 
             singleParsed = "";
             for(int i=0;i<obj_gift_list.length();i++){
                 JSONObject obj_child = obj_gift_list.getJSONObject(i);
-                singleParsed = obj_child.getString("gift");
+                singleParsed = obj_child.getString("id")+"."+obj_child.getString("gift");
                 gift_list.add(singleParsed);
             }
 

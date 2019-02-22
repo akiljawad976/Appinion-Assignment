@@ -18,7 +18,12 @@ public class MainActivity extends AppCompatActivity {
     public static Spinner  spProductGroup,spLiterature,spPhysicianSample,spGift;
     private EditText etAccompaniedWith,etRemarks,etLiterature,etPhysicianSample,etGift;
     private Button btnSubmit;
-
+    String text_ProductGroup = "";
+    String text_Literature = "";
+    String text_PhysicianSample = "";
+    String text_Gift = "";
+    String text_AccompaniedWith = "";
+    String text_Remarks = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +44,82 @@ public class MainActivity extends AppCompatActivity {
         fetchJSONdata process = new fetchJSONdata(MainActivity.this);
         process.execute();
 
-        //String text_ProductGroup = spProductGroup.getSelectedItem().toString();
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                spProductGroup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if(position>0){
+                             text_ProductGroup = spProductGroup.getSelectedItem().toString();
+                        }else{
+                             text_ProductGroup = "None";
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        spProductGroup.setSelection(0);
+                        text_ProductGroup = "None";
+
+                    }
+                });
+                spLiterature.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if(position>0){
+                            text_Literature = spLiterature.getSelectedItem().toString();
+                        }else{
+                            text_Literature = "None";
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        spLiterature.setSelection(0);
+                        text_Literature = "None";
+                    }
+                });
+                spPhysicianSample.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if(position>0){
+                            text_PhysicianSample = spPhysicianSample.getSelectedItem().toString();
+                        }else{
+                            text_PhysicianSample = "None";
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        spPhysicianSample.setSelection(0);
+                        text_PhysicianSample = "None";
+
+                    }
+                });
+                spGift.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if(position>0){
+                            text_Gift = spGift.getSelectedItem().toString();
+                        }else{
+                            text_Gift = "None";
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        spGift.setSelection(0);
+                        text_Gift = "None";
+
+                    }
+                });
+
+                text_AccompaniedWith = etAccompaniedWith.getText().toString();
+                text_Remarks = etRemarks.getText().toString();
+//                Toast toast = Toast.makeText(getAppContext(),"ProductGroup :"+ text_ProductGroup +"\nLiterature :"+
+//                        text_Literature+"\nPhysicianSample :"+text_PhysicianSample+"\nGift :"+text_Gift+"\nAccompanied With :"+
+//                        text_AccompaniedWith+"\nRemarks :"+text_Remarks,Toast.LENGTH_LONG);
                 Toast toast = Toast.makeText(getAppContext(),"DONE",Toast.LENGTH_LONG);
                 toast.show();
             }
